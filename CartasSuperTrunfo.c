@@ -35,6 +35,8 @@ int main() {
     scanf("%s", codigoDoEstado1);
     fflush(stdin);
 
+    nomeDoEstado1 = codigoDoEstado1[0];
+
     printf("Digite a população do estado da carta 1: \n");
     scanf("%d", &populacao1);
 
@@ -52,6 +54,8 @@ int main() {
     printf("Digite o código da carta 2: \n");
     scanf("%s", codigoDoEstado2);
     fflush(stdin);
+
+    nomeDoEstado2 = codigoDoEstado2[0];
 
     printf("Digite a população do estado da carta 2: \n");
     scanf("%d", &populacao2);
@@ -71,22 +75,28 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     // Exibindo os dados da carta 1:
+    printf("\n");
     printf("Carta 1: \n");
-    printf("Nome do estado: %c \n", codigoDoEstado1[0]);
+    printf("Nome do estado: %c \n", nomeDoEstado1);
     printf("Códico da carta 1: %s \n", codigoDoEstado1);
     printf("População : %d \n",populacao1);
     printf("Quantidade de pontos túriscos: %d \n",quantidadeDePontosTuristicos1);
     printf("Área: %.2f \n",area1);
     printf("PIB: %.2f \n",pib1);
+    printf("Densidade Populacional: %.2f \n", (populacao1/area1));
+    printf("PIB per Capita: %.2f \n", (pib1/populacao1));
 
     // Exibindo os dados da carta 2:
+    printf("\n");
     printf("Carta 2: \n");
-    printf("Nome do estado: %c \n", codigoDoEstado2[0]);
+    printf("Nome do estado: %c \n", nomeDoEstado2);
     printf("Códico da carta 2: %s \n", codigoDoEstado2);
     printf("População : %d \n",populacao2);
     printf("Quantidade de pontos túriscos: %d \n",quantidadeDePontosTuristicos2);
     printf("Área: %.2f \n",area2);
     printf("PIB: %.2f \n",pib2);
+    printf("Densidade Populacional: %.2f \n", (populacao2/area2));
+    printf("PIB per Capita: %.2f \n", (pib2/populacao2));
 
     return 0;
 }
